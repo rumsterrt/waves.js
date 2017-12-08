@@ -6,6 +6,6 @@ Waves JavaScript Library: HTTP API client and auxiliary functions
 [![npm version](https://badge.fury.io/js/waves.js.svg)](https://www.npmjs.com/package/waves.js)
 
 ## Installation
-```npm install --save waves.js```
+```npm install --save waves.js-fork```
 
 If you can not find any feature please do not hesitate - create issue.

@@ -1,5 +1,5 @@
 {
-  "name": "waves.js",
+  "name": "waves.js-fork",
   "productName": "Waves.js",
   "version": "0.0.7-14",
   "description": "Waves JavaScript Library: HTTP API client and auxiliary functions",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gagarin55/waves.js.git"
+    "url": "git+https://github.com/rumsterrt/waves.js.git"
   },
   "keywords": [
     "Waves Platform",
@@ -30,9 +30,9 @@
   "author": "gagarin55",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gagarin55/waves.js/issues"
+    "url": "https://github.com/rumsterrt/waves.js/issues"
   },
-  "homepage": "https://github.com/gagarin55/waves.js#readme",
+  "homepage": "https://github.com/rumsterrt/waves.js#readme",
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
