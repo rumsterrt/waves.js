@@ -22,7 +22,7 @@ describe('Waves test', () => {
   let txID
   it('get account balance',async() => {
     if(wavesTestAccount) {
-      const balance = await waves.currentClient.getBalance(wavesTestAccount.address)
+      const balance = await waves.currentClient.getBalance(wavesTestAccount.address,5)
       console.log(balance)
     }
   })
@@ -45,7 +45,7 @@ describe('Waves test', () => {
 
   it('get account balance',async() => {
     if(account) {
-      const balance = await waves.currentClient.getBalance(account.address)
+      const balance = await waves.currentClient.getBalance(account.address,5)
       console.log(balance)
     }
   })

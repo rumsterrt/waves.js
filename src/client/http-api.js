@@ -76,8 +76,8 @@ export class HttpApi {
       .then(response => response.data[0].map(tx => new Transaction(tx)));
   }
 
-  getBalance(address: string): Promise<number> {
-    return this.http.get(`addresses/balance/${address}`)
+  getBalance(address: string,confirmations: number = 0): Promise<number> {
+    return this.http.get(`addresses/balance/${address}/${confirmations}`)
       .then(response => {
         return response.data.balance;
       });
