@@ -97,7 +97,12 @@ export class HttpApi {
 
   getNodeStatus(): Promise<NodeStatus> {
     return this.http.get('node/status')
-      .then(response => new NodeStatus(response.data));
+      .then(response => new NodeStatus(response.data.seed));
+  }
+
+  getUniqueSeed(): Promise<string> {
+    return this.http.get('utils/seed')
+      .then(response => response.data.seed);
   }
 }
 

@@ -34,13 +34,13 @@ describe('Waves test', () => {
   })
 
   it('create new', async() => {
-    const WalletId = "seed"
+    const WalletId = await waves.currentClient.getUniqueSeed()
     console.log(`Started Waves: createNew for generated id "${WalletId}"`)
     account = await waves.createAccount(WalletId)
     console.log(
       `Created Waves wallet account "${WalletId}" and received associated address "${account.address}"`,
     )
-    console.log({ uuid: WalletId, address: account.address, pubKey: Waves.Base58.encode(account.keys.publicKey),privateKey: Waves.Base58.encode(account.keys.privateKey)})
+    //console.log({ uuid: WalletId, address: account.address, pubKey: Waves.Base58.encode(account.keys.publicKey),privateKey: Waves.Base58.encode(account.keys.privateKey)})
   })
 
   it('get account balance',async() => {
