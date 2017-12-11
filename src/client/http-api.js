@@ -17,12 +17,13 @@ export class HttpApi {
   }
 
   publishAssetTransfer(tx: AssetTransferTransaction): Promise<Transaction> {
-    return this.http.post('assets/broadcast/transfer', tx.json())
+    return this.http.post('assets/broadcast/transfer', tx.json(),{
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(response => new Transaction(response.data))
       .catch(error => {
-        if (error.response) {
-          return Promise.reject(new ErrorResponse(error.response.data.error, error.response.data.message));
-        }
         return Promise.reject(error);
       });
   }
